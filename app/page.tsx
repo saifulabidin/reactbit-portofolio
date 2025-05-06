@@ -23,12 +23,23 @@ export default function Home() {
   // Experience timeline data
   const timelineData = [
     {
-      title: "2023-2024",
+      title: "2023 - 2024",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Completed advanced web development and responsive design projects on FreeCodeCamp, earning certifications in Front End Development Libraries.
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            Completed the full FreeCodeCamp curriculum, earning multiple certifications and building advanced projects.
           </p>
+          <div className="mb-4">
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ <strong>Responsive Web Design Certification</strong> - Mastered HTML5, CSS3, and responsive design principles
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ <strong>JavaScript Algorithms & Data Structures</strong> - Developed strong foundations in JS programming
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ <strong>Front End Development Libraries</strong> - Built projects using React, Redux, and Bootstrap
+            </div>
+          </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
               src="/images/experience/project1.jpg"
@@ -49,57 +60,58 @@ export default function Home() {
       ),
     },
     {
-      title: "2022-2023",
+      title: "2021 - 2023",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Enrolled in multiple Coursera specializations including Full-Stack Web Development with React and Web Applications for Everybody.
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            Deepened my web development knowledge through self-paced study and project creation, focusing on modern JavaScript frameworks.
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Built complex web applications applying acquired knowledge in HTML, CSS, JavaScript, React, and backend technologies.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/images/experience/project3.jpg"
-              alt="Coursera Project"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/images/experience/project4.jpg"
-              alt="Coursera Certificate"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+          <div className="mb-4">
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Built a portfolio of full-stack applications using MERN stack
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Contributed to open-source projects on GitHub
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Practiced responsive design and accessibility principles
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Learned API integration and backend development
+            </div>
           </div>
         </div>
       ),
     },
     {
-      title: "2020-2022",
+      title: "2020 - 2021",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Started learning journey with Dicoding Indonesia, completing multiple courses on web and mobile development
+            Started my formal learning journey with Dicoding Indonesia, completing multiple courses and certifications.
           </p>
-          <div className="mb-8">
+          <div className="mb-4">
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Completed "Belajar Dasar Pemrograman Web" certification
+              ✅ <strong>Belajar Dasar Pemrograman Web</strong> - Learned fundamentals of HTML, CSS and JavaScript
             </div>
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Built responsive web applications using modern techniques
+              ✅ <strong>Fundamental Front-End Web Development</strong> - Advanced concepts in modern web development
             </div>
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Learned JavaScript fundamentals and front-end frameworks
+              ✅ <strong>JavaScript Development</strong> - Deep dive into JavaScript programming
             </div>
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Developed basic understanding of API integration
+              ✅ Created multiple portfolio projects showcasing learned skills
             </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Created several portfolio projects showcasing learned skills
-            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-4">
+            <Image
+              src="/images/experience/visual officer.png"
+              alt="Dicoding Certificate"
+              width={500}
+              height={250}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-40 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
           </div>
         </div>
       ),
@@ -108,11 +120,12 @@ export default function Home() {
 
   // Project data
   const projects = [
+    // Fullstack projects
     {
       title: "Balancescan-Fullstack",
       description: "Full-stack application for monitoring balances & real-time analytics of multiple currencies with blockchain integration",
       techStack: ["TypeScript", "React", "Node.js", "Web3", "MongoDB"],
-      imageUrl: "/images/projects/project1.jpg",
+      imageUrl: "/images/project/fullstack/balance-scan.jpg",
       githubUrl: "https://github.com/saifulabidin/balancescan-fullstack",
       liveUrl: "#"
     },
@@ -120,24 +133,41 @@ export default function Home() {
       title: "Book Trading Club",
       description: "Platform for peer-to-peer book trading with notifications & user reputation system",
       techStack: ["React", "Node.js", "Express", "MongoDB"],
-      imageUrl: "/images/projects/project2.jpg",
+      imageUrl: "/images/project/fullstack/book-trading-club.jpg",
       githubUrl: "https://github.com/saifulabidin/book-trading-club",
       liveUrl: "#"
     },
+    // Frontend projects
     {
-      title: "Cuaca Ceria",
-      description: "Weather forecast web app with 7-day predictions using 7timer API and responsive UI",
-      techStack: ["HTML", "CSS", "JavaScript", "API Integration"],
-      imageUrl: "/images/projects/project3.jpg",
-      githubUrl: "https://github.com/saifulabidin/cuaca-ceria",
+      title: "25-5 Clock",
+      description: "Pomodoro timer application with customizable work and break intervals",
+      techStack: ["React", "JavaScript", "CSS"],
+      imageUrl: "/images/project/frontend/25-5-clock.png",
+      githubUrl: "https://github.com/saifulabidin/25-5-clock",
       liveUrl: "#"
     },
     {
-      title: "Nightlife Coordination App",
-      description: "Application for coordinating nightlife activities with venue search and recommendations",
-      techStack: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
-      imageUrl: "/images/projects/project4.jpg",
-      githubUrl: "https://github.com/saifulabidin/nightlife-coordination-app",
+      title: "JavaScript Calculator",
+      description: "Interactive calculator with mathematical operation support and memory functions",
+      techStack: ["React", "JavaScript", "HTML", "CSS"],
+      imageUrl: "/images/project/frontend/javascript-calculator.png",
+      githubUrl: "https://github.com/saifulabidin/javascript-calculator",
+      liveUrl: "#"
+    },
+    {
+      title: "Markdown Previewer",
+      description: "Real-time markdown preview application with support for all common markdown syntax",
+      techStack: ["React", "JavaScript", "Marked.js", "Bootstrap"],
+      imageUrl: "/images/project/frontend/Markdown-Previewer.png",
+      githubUrl: "https://github.com/saifulabidin/markdown-previewer",
+      liveUrl: "#"
+    },
+    {
+      title: "Random Quote Machine",
+      description: "App that displays random inspirational quotes with social media sharing capabilities",
+      techStack: ["React", "JavaScript", "API Integration"],
+      imageUrl: "/images/project/frontend/Random-Quote-Machine.png",
+      githubUrl: "https://github.com/saifulabidin/random-quote-machine",
       liveUrl: "#"
     }
   ];
@@ -279,7 +309,7 @@ export default function Home() {
             <div className="md:col-span-5">
               <div className="rounded-lg overflow-hidden border-4 border-[#C6F10E] shadow-xl shadow-[#C6F10E]/10">
                 <Image 
-                  src="https://avatars.githubusercontent.com/u/55196633?s=400&u=e506e3ce7606bddb3801de5f1befe7d7a5cb96c4&v=4" 
+                  src="/images/profile.jpg" 
                   alt="Saiful Abidin" 
                   width={500} 
                   height={500}
@@ -526,8 +556,8 @@ export default function Home() {
             <div className="bg-[#20293A] p-5 rounded-lg shadow-lg hover:shadow-xl transition-all">
               <div className="h-48 bg-[#19222D] rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                 <Image
-                  src="/images/sertifikat/sertifikat agus sugandi kominfo.png"
-                  alt="Certificate - Web Development"
+                  src="/images/sertifikat/freecodecamp-responsive-web-design.jpg"
+                  alt="Certificate - Responsive Web Design"
                   width={400}
                   height={300}
                   className="w-full h-full object-contain p-2"
@@ -545,7 +575,7 @@ export default function Home() {
             <div className="bg-[#20293A] p-5 rounded-lg shadow-lg hover:shadow-xl transition-all">
               <div className="h-48 bg-[#19222D] rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                 <Image
-                  src="/images/sertifikat/sertifikat agus sugandi kominfo.png"
+                  src="/images/sertifikat/freecodecamp-javascript-algorithms-and-data-structures.jpg"
                   alt="Certificate - JavaScript"
                   width={400}
                   height={300}
@@ -564,14 +594,14 @@ export default function Home() {
             <div className="bg-[#20293A] p-5 rounded-lg shadow-lg hover:shadow-xl transition-all">
               <div className="h-48 bg-[#19222D] rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                 <Image
-                  src="/images/sertifikat/sertifikat agus sugandi kominfo.png"
-                  alt="Certificate - React"
+                  src="/images/sertifikat/freecodecamp-backend-development-and-apis.jpg"
+                  alt="Certificate - Backend Development"
                   width={400}
                   height={300}
                   className="w-full h-full object-contain p-2"
                 />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Frontend Development Libraries</h3>
+              <h3 className="text-lg font-semibold mb-2">Backend Development and APIs</h3>
               <p className="text-gray-400 text-sm mb-3">FreeCodeCamp</p>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-gray-400">Issued: October 2023</span>
@@ -583,14 +613,14 @@ export default function Home() {
             <div className="bg-[#20293A] p-5 rounded-lg shadow-lg hover:shadow-xl transition-all">
               <div className="h-48 bg-[#19222D] rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                 <Image
-                  src="/images/sertifikat/sertifikat agus sugandi kominfo.png"
-                  alt="Certificate - Web Fundamentals"
+                  src="/images/sertifikat/dicoding-dasar-pemrograman-javascript.jpg"
+                  alt="Certificate - JavaScript Fundamentals"
                   width={400}
                   height={300}
                   className="w-full h-full object-contain p-2"
                 />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Belajar Dasar Pemrograman Web</h3>
+              <h3 className="text-lg font-semibold mb-2">Dasar Pemrograman JavaScript</h3>
               <p className="text-gray-400 text-sm mb-3">Dicoding Indonesia</p>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-gray-400">Issued: May 2021</span>
@@ -602,15 +632,15 @@ export default function Home() {
             <div className="bg-[#20293A] p-5 rounded-lg shadow-lg hover:shadow-xl transition-all">
               <div className="h-48 bg-[#19222D] rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                 <Image
-                  src="/images/sertifikat/sertifikat agus sugandi kominfo.png"
-                  alt="Certificate - React Coursera"
+                  src="/images/sertifikat/dicoding-belajar-backend-pemula-dengan-javascript.jpg"
+                  alt="Certificate - Backend Fundamentals"
                   width={400}
                   height={300}
                   className="w-full h-full object-contain p-2"
                 />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Full-Stack Development with React</h3>
-              <p className="text-gray-400 text-sm mb-3">Coursera - Hong Kong University</p>
+              <h3 className="text-lg font-semibold mb-2">Backend Development with JavaScript</h3>
+              <p className="text-gray-400 text-sm mb-3">Dicoding Indonesia</p>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-gray-400">Issued: December 2022</span>
                 <a href="#" className="text-[#C6F10E] text-sm hover:underline">View Certificate</a>
@@ -621,15 +651,15 @@ export default function Home() {
             <div className="bg-[#20293A] p-5 rounded-lg shadow-lg hover:shadow-xl transition-all">
               <div className="h-48 bg-[#19222D] rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                 <Image
-                  src="/images/sertifikat/sertifikat agus sugandi kominfo.png"
-                  alt="Certificate - Node.js"
+                  src="/images/sertifikat/dicoding-belajar-dasar-cloud-dan-gen-ai-di-aws.jpg"
+                  alt="Certificate - Cloud and AI"
                   width={400}
                   height={300}
                   className="w-full h-full object-contain p-2"
                 />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Server-side Development with Node.js</h3>
-              <p className="text-gray-400 text-sm mb-3">Coursera</p>
+              <h3 className="text-lg font-semibold mb-2">Cloud & GenAI Fundamentals</h3>
+              <p className="text-gray-400 text-sm mb-3">Dicoding Indonesia</p>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-gray-400">Issued: February 2023</span>
                 <a href="#" className="text-[#C6F10E] text-sm hover:underline">View Certificate</a>
