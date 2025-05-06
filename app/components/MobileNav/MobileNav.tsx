@@ -11,9 +11,11 @@ interface MobileNavProps {
 const links = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#education", label: "Education" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
+  { href: "#certificates", label: "Certificates" },
+  { href: "#experience", label: "Learning Journey" },
   { href: "#contact", label: "Contact" },
 ];
 
