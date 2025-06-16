@@ -64,3 +64,42 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
 }
+
+/* Swiper Customization for Skills Section */
+.skills-swiper {
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.skills-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px !important; /* Fixed width for consistent loop */
+  flex-shrink: 0;
+}
+
+.skills-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+  will-change: transform;
+}
+
+/* Ensure proper loop behavior */
+.skills-swiper.swiper-initialized .swiper-slide {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Hover effects for skill cards */
+.skill-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Gradient overlay for section */
+.skills-section-overlay {
+  background: linear-gradient(135deg, rgba(198, 241, 14, 0.05) 0%, rgba(25, 34, 45, 0.8) 100%);
+}

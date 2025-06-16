@@ -1,121 +1,86 @@
 'use client';
 
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { SkillData } from "../../constants/skillsData";
 import Image from "next/image";
-
-interface SkillsData {
-  frontend: string[];
-  backend: string[];
-  mobile: string[];
-  database: string[];
-  devopsAndTools: string[];
-}
-
-const skills: SkillsData = {
-  frontend: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Bootstrap"],
-  backend: ["Node.js", "Express", "Laravel", "Python", "FastAPI", "RESTful API"],
-  mobile: ["Flutter", "Dart", "Android", "iOS", "Cross-platform Development"],
-  database: ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "Redis"],
-  devopsAndTools: ["Git", "GitHub", "VS Code", "Docker", "Webpack", "AWS", "Vercel", "Figma", "Postman"]
-};
+import { Autoplay } from "swiper/modules";
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-16 md:py-24 bg-[#20293A]">
+    <section id="skills" className="py-16 md:py-24 bg-[#19222D] relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">My <span className="text-[#C6F10E]">Skills</span></h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Skills Categories */}
-          <div className="space-y-8">
-            {/* Frontend */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-[#C6F10E]">Frontend Development</h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.frontend.map((skill, index) => (
-                  <span key={index} className="bg-[#19222D] text-white px-4 py-2 rounded-full text-sm hover:bg-[#C6F10E] hover:text-black transition-colors">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+        {/* Section Header */}
+        <div className="flex flex-col items-center gap-4 mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-center">
+            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C6F10E] to-green-400">Skills</span>
+            {" & "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
+              Technologies
+            </span>
+          </h2>
+          <p className="text-gray-400 text-lg md:text-xl text-center max-w-2xl">
+            Using the latest technologies this world has to offer
+          </p>
+        </div>
 
-            {/* Backend */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-[#C6F10E]">Backend Development</h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.backend.map((skill, index) => (
-                  <span key={index} className="bg-[#19222D] text-white px-4 py-2 rounded-full text-sm hover:bg-[#C6F10E] hover:text-black transition-colors">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Mobile */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-[#C6F10E]">Mobile Development</h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.mobile.map((skill, index) => (
-                  <span key={index} className="bg-[#19222D] text-white px-4 py-2 rounded-full text-sm hover:bg-[#C6F10E] hover:text-black transition-colors">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Database */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-[#C6F10E]">Database & Storage</h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.database.map((skill, index) => (
-                  <span key={index} className="bg-[#19222D] text-white px-4 py-2 rounded-full text-sm hover:bg-[#C6F10E] hover:text-black transition-colors">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* DevOps & Tools */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-[#C6F10E]">DevOps & Tools</h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.devopsAndTools.map((skill, index) => (
-                  <span key={index} className="bg-[#19222D] text-white px-4 py-2 rounded-full text-sm hover:bg-[#C6F10E] hover:text-black transition-colors">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Technology Logos */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-6 text-center text-[#C6F10E]">Technologies I Use</h3>
-            <div className="grid grid-cols-4 gap-6">
-              {[
-                { name: "HTML5", logo: "/images/logo/html 1.png" },
-                { name: "CSS3", logo: "/images/logo/css.png" },
-                { name: "JavaScript", logo: "/images/logo/javascript.png" },
-                { name: "React", logo: "/images/logo/react.png" },
-                { name: "Bootstrap", logo: "/images/logo/Bootstrap_logo 1.png" },
-                { name: "Git", logo: "/images/logo/git.png" },
-                { name: "Figma", logo: "/images/logo/figma.png" }
-              ].map((tech, index) => (
-                <div key={index} className="flex flex-col items-center group">
-                  <div className="w-16 h-16 bg-white rounded-lg p-2 group-hover:scale-110 transition-transform duration-300">
+        {/* Skills Carousel */}
+        <div className="mb-16">
+          <Swiper
+            slidesPerView="auto"
+            spaceBetween={30}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
+            speed={5000}
+            allowTouchMove={false}
+            modules={[Autoplay]}
+            className="skills-swiper"
+          >
+            {/* Triple duplicate data for ultra smooth infinite loop */}
+            {[...SkillData, ...SkillData, ...SkillData].map((skill, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex flex-col items-center group cursor-pointer">
+                  <div className="w-20 h-20 bg-[#20293A] rounded-2xl p-3 group-hover:bg-[#C6F10E] transition-all duration-300 group-hover:scale-110 shadow-lg hover:shadow-xl">
                     <Image
-                      src={tech.logo}
-                      alt={tech.name}
-                      width={60}
-                      height={60}
-                      className="w-full h-full object-contain"
+                      src={skill.Image}
+                      alt={skill.name}
+                      width={skill.width}
+                      height={skill.height}
+                      className="w-full h-full object-contain transition-all duration-300 group-hover:scale-110"
                     />
                   </div>
-                  <span className="text-sm text-gray-300 mt-2 group-hover:text-[#C6F10E] transition-colors">
-                    {tech.name}
+                  <span className="text-sm text-gray-300 mt-3 group-hover:text-[#C6F10E] transition-colors font-medium">
+                    {skill.name}
                   </span>
                 </div>
-              ))}
-            </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-[#C6F10E] mb-2">5+</div>
+            <div className="text-gray-400 text-sm">Years Experience</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-[#C6F10E] mb-2">20+</div>
+            <div className="text-gray-400 text-sm">Projects Completed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-[#C6F10E] mb-2">15+</div>
+            <div className="text-gray-400 text-sm">Technologies</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-[#C6F10E] mb-2">100%</div>
+            <div className="text-gray-400 text-sm">Client Satisfaction</div>
           </div>
         </div>
       </div>
