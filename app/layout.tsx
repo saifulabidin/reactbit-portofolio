@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Saiful Abidin | Portfolio",
-  description: "A personal portfolio showcasing my work and skills.",
+  title: "Saiful Abidin - Full Stack Developer | Professional Portfolio",
+  description: "Full Stack Developer from Indonesia specializing in React, Next.js, Node.js, and modern web technologies. Over 5 years of experience building scalable web applications, e-commerce platforms, and innovative digital solutions.",
 };
 
 export default function RootLayout({
